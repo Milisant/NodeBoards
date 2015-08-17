@@ -1,0 +1,42 @@
+var five = require("johnny-five");
+var board = new five.Board();
+
+board.on('ready', function(){
+
+       /* var pin = new five.Pin(9);
+        pin.high();
+
+        var light = new five.light(13);
+
+        setTimeout(function(){
+            pin.low();
+        }, 1000);
+
+        setTimeout(function(){
+            pin.high();
+        }, 2000);
+
+        setTimeout(function(){
+            pin.low();
+        }, 3000);       
+      light.on(ready, function(){
+        */
+
+    var Light = function(pin){
+
+    this.on = function(){
+      //var pin = new five.Pin();
+        setTimeout(function(){
+            pin.high();
+        }, 1000);  
+};
+    this.off = function() {
+
+};
+
+    var light9 = new Light(13);
+       
+     var light13 = new Light();
+         light13.off();
+	 light9.on();
+};
